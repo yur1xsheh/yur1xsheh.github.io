@@ -1,37 +1,55 @@
-body {
-  background: linear-gradient(to bottom, #f7a1eb, hsl(203, 98%, 79%));
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Open Sans', sans-serif;
+body { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 10% 10%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
-.profile-container {
-  display: flex;
-  flex-direction: column;
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
 
-.top-bar {
+.center {
   background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
 
-.profile {
-  background: white;
-  padding: 3em;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px #333;
-  text-align: center;
-  width: 55%;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  margin-top: 20px;
-}
 
   
   
+
+
+
+
+
 .profile-picture {
     width: 100px;
     height: 100px;
@@ -156,3 +174,26 @@ a#link-button:hover {
     cursor: pointer;
   }
   
+  #windowBar {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+}
+
+#windowBar .titlebar {
+    width: 80%;
+    width: calc(100% - 40px);
+    height: 40px;
+    text-align: center;
+    float: left;
+    background: #ececec;
+}
+
+#windowBar .closebutton {
+    width: 20%;
+    width: calc(40px);
+    height: 40px;
+    float: left;
+    background: #ddd;
+}
