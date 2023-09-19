@@ -59,7 +59,6 @@ button#open-player img {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
 }
