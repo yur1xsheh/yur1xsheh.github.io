@@ -4,6 +4,7 @@
 <head>
   <head>
   <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/959091462484668478/1070589259163119676/IMG_0643.jpg">
+  <script src="script.js"></script> 
   <style>
     .dot {
       position: fixed;
@@ -41,14 +42,29 @@
     right: 10px;
     width: 10px;
     height: 10px;
-    background-color: black;
+    background-color: rgb(51, 255, 0);
+    border-radius: 50%;
+  }
+  .dot1 {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(238, 255, 0);
+    border-radius: 50%;
+  }
+  .dot2 {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
     border-radius: 50%;
   }
 </style>
 
-<a href="/" >
-  <div class="dot"></div>
-</a>
 <!--đang cố fix CÁI UI BỊ ÓC CHÓ ĐỊT MẸ CSS-->
 
 
@@ -59,6 +75,25 @@
   </div>
 
 <div id="corner-text">🟢 status: hypnotize:3 </div>
-<div id="bottom-left-text">website dang cap nhat...</div>
+<div id="pffixed">
+  <a href="/" >
+    <div class="dot"></div>
+  </a>
+  <a href="/1/">
+    <div class="dot1"></div>
+  </a>
+  <a href="/env/">
+    <div class="dot2"></div>
+  </a>
+  <h1 id="headline">hipnguynn1!!n!</h1>
+
+</div>
+<div id="bottom-left-text">website dang chinh sua...!!! chotto mateee</div>
+<div id="bottom-countdown">
+  <ul>
+    <div id="headline">Countdown sinh nhật :3</div>
+    <div>Còn <span id="days"></span> ngày <span id="hours"></span> giờ <span id="minutes"></span> phút <span id="seconds"></span> giây</div>
+  </ul>
+</div>
   </body>
 </html>
