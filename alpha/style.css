@@ -85,6 +85,19 @@ background-size: 1000% 1000%;
   background-color: #000000;
   color: rgb(255, 255, 255);
 }
+
+.button2 {
+  background-color: rgb(250, 250, 250); 
+  color: black; 
+  border: 2px solid #085a7a;
+  border-radius: 100px;
+}
+
+.button2:hover {
+  background-color: #085a7a;
+  color: rgb(255, 255, 255);
+}
+
 .image-area{
     width: 10px;
     height: 10px;
@@ -115,6 +128,16 @@ background-size: 1000% 1000%;
   padding: 10px;
   border-radius: 18px;
 }
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
 
 
 
