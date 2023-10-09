@@ -1,22 +1,42 @@
-const openPlayerBtn = document.getElementById("open-player");
-const playerContainer = document.getElementById("player-container");
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
 
-openPlayerBtn.addEventListener("click", function () {
-  playerContainer.classList.toggle("hidden");
-});
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "11/01/",
+      birthday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
 
-const container = document.getElementById("container");
-let colorIndex = 0;
-const colors = ["pink", "purple", "blue"];
+        const now = new Date().getTime(),
+              distance = countDown - now;
 
-setInterval(() => {
-  container.style.backgroundColor = colors[colorIndex];
-  colorIndex = (colorIndex + 1) % colors.length;
-}, 1000);
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-const button = document.getElementById('warning-button');
-const warning = document.getElementById('warning');
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "Hôm nay là sinh nhật của tui nèk";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
 
-button.addEventListener('click', function() {
-  warning.style.display = "block";
-});
+
