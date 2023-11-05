@@ -278,6 +278,7 @@ a#link-button:hover {
     font-family: 'Futura', sans-serif;
     font-size: 13px;
     color: rgb(129, 129, 129);
+    font-style: bold;
   }
   
 #bottom-countdown{
