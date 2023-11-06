@@ -151,8 +151,7 @@ background-size: 2000% 1000%;
   
 }
 
-
-#corner-text {
+#changeText {
   position: fixed;
   top: 10px;
   left: 10px;

@@ -38,4 +38,3 @@ nyanBtn.addEventListener('click', function(){
    playPause(nyan);
    progress(nyanBtn, nyan);
 });
-
