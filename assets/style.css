@@ -1,61 +1,28 @@
 body { 
   height: 100%;
   width: 100%;
-  left:0;
   right: 0;
   top: 0;
   bottom: 0;
+  margin: 0;
   justify-content: center;
   align-items: center;
   display: flex;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
-  
-  
-background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-background-size: 2000% 1000%;
 
--webkit-animation: rainbow 18s ease infinite;
--z-animation: rainbow 18s ease infinite;
--o-animation: rainbow 18s ease infinite;
-  animation: rainbow 18s ease infinite;}
 
-@-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@keyframes rainbow { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+#pffixed {
+  position: fixed;
 }
 
 .profile-picture {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  margin-right: 1em;
 }
-
-
-
-.center {
-  background-color: #333;
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-}
-
 .button {
   display : flex;
   border: none;
@@ -131,7 +98,6 @@ background-size: 2000% 1000%;
 
 
 
-
 .image-area{
     width: 10px;
     height: 10px;
@@ -140,84 +106,28 @@ background-size: 2000% 1000%;
   
 }
 
-#changeText {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 16px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  border-radius: 18px;
-}
-
-.white-popup {
-  position: relative;
-  background: #FFF;
-  padding: 20px;
-  width:auto;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
 #player {
   position: fixed;
   top: 10px;
   right: 10px;
   font-family: 'Montserrat', sans-serif;
 }
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 1em;
-  }
+
   
 .profile img {
+  position: fixed;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 1em;
   }
   
-.profile h1 {
-    font-size: 1.7em;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-  }
-  
-.profile p {
-    font-size: 1.5em;
-    font-weight: 400;
-    margin-bottom: 0.5em;
-  }
-  
-button#open-player {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-button#open-player img {
-    height: 5px;
-    vertical-align: middle;
-  }
-  
-#player-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-  }
 
-
-  
 .hidden {
     display: none;
   }
 a#link-button {
+   position: fixed;
     background-color: #FF99CC;
     color: #fff;
     padding: 10px 20px;
@@ -232,6 +142,7 @@ a#link-button {
   
   
 a#link-button:hover {
+  position: fixed;
     background-color: #444;
   }
   
@@ -255,23 +166,11 @@ a#link-button:hover {
   font-size: 13px;
   color: rgb(255, 139, 230);
 }
+}
 
-  
-
-#container {
-    width: 100%;
-    height: 100%;
-    background-color: pink;
-  }
-  
-  
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-
+#bg {
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
